@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <div>
+      <input type="text">
+    </div>
+    <div>
+      <button>%</button>
+      <button onclick="back()">Back</button>
+      <button onclick="del()">C</button>
+      <button onclick="sum('/')">/</button>
+    </div>
+    <div>
+      <button onclick="sum(7)" class="sz">7</button>
+      <button onclick="sum(8)" class="sz">8</button>
+      <button onclick="sum(9)" class="sz">9</button>
+      <button onclick="sum('+')">+</button>
+    </div>
+    <div>
+      <button onclick="sum(4)" class="sz">4</button>
+      <button onclick="sum(5)" class="sz">5</button>
+      <button onclick="sum(6)" class="sz">6</button>
+      <button onclick="sum('-')">-</button>
+    </div>
+    <div>
+      <button onclick="sum(1)" class="sz">1</button>
+      <button onclick="sum(2)" class="sz">2</button>
+      <button onclick="sum(3)" class="sz">3</button>
+      <button onclick="sum('*')">*</button>
+    </div>
+    <div>
+      <button class="sz">+/-</button>
+      <button onclick="sum(0)" class="sz">0</button>
+      <button onclick="sum('.')" class="sz"><b>.</b></button>
+      <button onclick="dy()" style="background-color: blue; color: #fff;">=</button>
+    </div>
+  </div>
+
+  <script>
+    let inputvalue = 0
+    let str = ''
+    let input = document.querySelector('input')
+    function sum(a) {
+      str += a
+      if (str.length >= 1) {
+        if (isNaN(str[str.length - 2]) && isNaN(a)) {
+          str = str.slice(0, str.length - 2)
+          str += a
+          input.value = str
+        } else {
+          input.value = str
+        }
+      } else {
+        input.value = str
+      }
+    }
+    function del() {
+      str = ''
+      input.value = str
+    }
+    function dy() {
+      str = input.value = eval(str)
+    }
+    function back() {
+      if (typeof str === "string") {
+        str = str.slice(0, str.length - 1)
+        input.value = str
+      } else {
+        str = ''
+      }
+    }
+  </script>
+  <style>
+    button {
+      width: 70px;
+      height: 60px;
+      margin-top: 3px;
+      border-radius: 5px;
+      border: 1px solid #f9f3e5;
+    }
+
+    .sz {
+      background-color: #fff;
+    }
+
+    input {
+      width: 285px;
+      height: 50px;
+      text-align: right;
+    }
+  </style>
+</body>
+
+</html>

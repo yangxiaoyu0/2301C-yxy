@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Aaa(x,y){
+      this.x = x
+      this.y = y
+    }
+    Aaa.prototype.Tostring = function(){
+      return this.x +','+this.y
+    }
+    let a = new Aaa(111,222)
+    console.log(a.Tostring(15,89));
+  </script>
+</body>
+</html>

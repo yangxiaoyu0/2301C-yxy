@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>点击切换颜色</h1>
+  <div>
+    <button  onclick="s()"> </button>
+    <button  onclick="s()"> </button>
+    <button  onclick="s()"> </button>
+  </div>
+</body>
+<script>
+  let a = document.querySelectorAll('button')
+  for (let index = 0; index < a.length; index++) {
+      a[index].onclick = function (){
+        a[index].style.backgroundColor = 'blue'
+      }
+  }
+</script>
+<style>
+  .gl{
+    background-color: antiquewhite;
+  }
+  button{
+    width: 100px;
+    height: 50px;
+    background-color: #fff;
+  }
+</style>
+</html>

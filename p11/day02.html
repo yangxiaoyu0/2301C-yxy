@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div onclick="a()"></div>
+</body>
+<script>
+let div = document.querySelector('div')
+function a (){
+  setTimeout(() => {
+    div.style.background = 'pink'
+  }, 2000);
+}
+let arr = [1,6,9,10,100,25]
+function b (){
+  for (let index = 0; index < arr.length; index++) {
+    if(arr[index]%2==0){
+      console.log(arr[index]);
+    }
+  }
+}
+b()
+</script>
+<style>
+  div{
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid;
+  }
+</style>
+</html>
