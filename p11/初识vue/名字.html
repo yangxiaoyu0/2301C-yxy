@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/vue.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    名： <input v-model="a" @input="aa()" type="text">
+    姓：<input v-model="b" @input="aa()" type="text">
+    姓名：<input v-model="p" type="text">
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        a: '',
+        b: '',
+        c: ''
+      },
+      computed: {
+        p: {
+          get() {
+            return this.a + '-' + this.b
+          },
+          set(a) {
+            let q = a.split('-')
+            this.a = q[0]
+            this.b = q[1]
+          }
+        },
+      },
+      methods: {
+        aa() {
+          this.c = this.a + '-' + this.b
+          console.log(this.c);
+        },
+        ab() {
+          let a = this.c.split('-')
+          this.a = a[0]
+          this.b = a[1]
+        }
+      },
+    })
+  </script>
+</body>
+
+</html>

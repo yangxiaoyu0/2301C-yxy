@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/vue.min.js"></script>
+</head>
+<body>
+  <div :class="a" onclick="tab()">
+    4444444
+  </div>
+</body>
+<script>
+  
+  function tab() {
+    document.querySelector('div').style.background = `rgb(${Math.floor(Math.random)*255},${Math.floor(Math.random)*255},${Math.floor(Math.random)*255})`  
+  }
+</script>
+</html>
+<style>
+  .a{
+    background-color: blue;
+  }
+  .b{
+    background-color: black;
+  }
+  div{
+    width: 200px;
+    height: 100px;
+  }
+</style>

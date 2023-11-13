@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/vue.min.js"></script>
+</head>
+<a href="https://www.baidu.com/" @click.prevent="aaa">123456789</a>
+<div class="list">
+  <ul>
+    <li class="a">1</li>
+    <li class="a">2</li>
+    <li class="a">3</li>
+    <li class="a">4</li>
+    <li class="a">5</li>
+  </ul>
+</div>
+<div class="a">
+  <button onclick="www()" keydown="www()">阻止</button>
+</div>
+<body>
+  <script>
+   function aaa(){
+      alert('提示')
+    }
+    function www() {
+      console.log('jknjk');
+      alert('asfsddf')
+    }
+  </script>
+</body>
+<style>
+  .list{
+    height: 200px;
+    overflow: auto;
+    .a{
+      height: 60px;
+    }
+  }
+</style>
+</html>

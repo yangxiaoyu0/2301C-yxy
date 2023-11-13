@@ -1,0 +1,66 @@
+html,
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url(bg.gif) center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  /* background-color:black;
+  background-image:
+  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px; */
+}
+
+h1 {
+  text-align: center;
+}
+
+#abc {
+  flex: 1;
+  height: 100%;
+}
+#abc span b {
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+}
+#abc span b,
+h2 {
+  margin: 10px 30px;
+  font-size: 30px;
+  color: aquamarine;
+}
+
+.box {
+  height: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box .right {
+  flex: 1;
+  text-align: left;
+}
+
+.box .right div {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: antiquewhite;
+  border: none;
+  border-radius: 5px;
+  color: brown;
+}

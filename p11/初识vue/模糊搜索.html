@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- <button>{{new Date().getTime()}}</button> -->
+    <input type="text" v-model="word" @input="ddd()">   <button @click="ddd(1)">升序</button> <button @click="ddd(2)">降序</button> <button @click="ddd(3)">原顺序</button>
+    <div>
+      <ul>
+        <li v-for="(item, index) in ddd()" :key="index">{{item.name}}</li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      word:'',
+      list:[{
+        name:'1111',
+        age:18
+      },{
+        name:'222',
+        age:25
+      },{
+        name:'3331',
+        age:20
+      },]
+    },
+    methods: {
+      ddd(a) {
+        // console.log(a);
+        if(a==0){
+          // console.log(2222);
+          return this.list.filter((item) => item.name.includes(this.word))
+        }else if (a==1){
+          return this.list.sort((a,b)=>{
+            return b.age-a.age
+          })
+        }
+      },
+    },
+  })
+</script>
+</html>

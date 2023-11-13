@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <view class="item">
+    <img class="img" src="" alt="">
+    <view class="right">
+      <view>新鲜向椿100g/份</view>
+      <button class="a">好货上新</button>
+      <view class="button">
+        <button class="sq">已省5.1元</button>
+        <button class="xg">限购5份</button>
+      </view>
+      <view class="pricte">
+        <view>
+          <view class="min">￥9.9</view>
+          <view class="max"><s>￥15</s></view>
+        </view>
+        <button class="add">加入购物车</button>
+      </view>
+    </view>                  
+  </view>
+</body>
+<style>
+.item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .img{
+    width: 80px;
+    height: 80px;
+  }
+  .a{
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    border: none;
+    padding: 5px 10px;
+    color: red;
+  }
+  .button{
+    display: flex;
+    .sq,.xg{
+      width: 80px;
+      padding: 5px;
+    }
+    .sq{
+      border-radius: 5px 0px 0 5px;
+      background-color: #ff8080;
+      border: 1px solid #ff8080;
+      color: #fff;
+    }
+    .xg{
+      border-radius: 0px 5px 5px 0px;
+      border: 1px solid #ff8080;
+      background-color: #fff;
+    }
+  }
+  .pricte{
+    display: flex;
+    justify-content: space-between;
+    .min{
+      color: red;
+    }
+    .max{
+      font-size: 14px;
+      color: #dadada;
+    }
+    .add{
+      background-color: red;
+      border: none;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+  }
+}
+</style>
+</html>

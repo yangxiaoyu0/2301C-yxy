@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // let a = 5
+  // let obj = {
+  //   b:'555'
+  // }
+  // Object.defineProperty(obj,'age',{
+  //   get(){
+      
+  //     return a
+  //   },
+  //   set(value){
+  //     age = value
+  //   }
+  // })
+
+  // let obj = {x:100}
+  //   let obj1 = {y:100}
+  //   Object.defineProperty(obj1, 'x',{
+  //     get(){
+  //       return obj.x
+  //     },
+  //     set(value){
+  //       obj.x=value
+  //     }
+  //   })
+
+
+
+    let aa = '123'
+    let info = {
+      bb:"456"
+    }
+    Object.defineProperty(info , 'aa' ,{
+      get(){
+        return aa
+      },
+      set(value){
+        aa = value
+      }
+    })
+
+    let obja = {
+      x:888
+    }
+    let objb = {
+      y:999
+    }
+    Object.defineProperty(objb , 'x' ,{
+      get(){
+        return obja.x
+      },
+      set(value){
+        objb.x = value
+      }
+    })
+</script>
+</html>
